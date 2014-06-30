@@ -4,11 +4,13 @@ module IdpApp
 
   class SamlIdpController < ::SamlIdp::IdpController
     def idp_authenticate(email, password)
-      true
+      puts saml_acs_url
+      User.new(email)
     end
 
     def idp_make_saml_response(user)
-      encode_SAMLResponse("test@example.com")
+      puts saml_acs_url
+      encode_SAMLResponse(user.email)
     end
   end
 
