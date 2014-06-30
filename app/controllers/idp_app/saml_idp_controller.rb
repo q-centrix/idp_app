@@ -11,7 +11,7 @@ module IdpApp
     def idp_make_saml_response(user)
       puts saml_acs_url
       puts user.inspect
-      encode_SAMLResponse(user.email)
+      encode_SAMLResponse('test@sample.com')
     end
   end
 
