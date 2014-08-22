@@ -1,7 +1,5 @@
 require_dependency "idp_app/application_controller"
 
-
-
 module IdpApp
 
   class SamlIdpController < SamlIdp::IdpController
@@ -14,10 +12,6 @@ module IdpApp
     end
 
     protected
-
-    def attributes(provider, nameID)
-      raise provider.inspect
-    end
 
     def attributes_provider(email)
       %Q{

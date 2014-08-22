@@ -10,5 +10,7 @@ gemspec
 # Git. Remember to move these dependencies to your gemspec before releasing
 # your gem to rubygems.org.
 
+gem 'ruby-saml-idp', git: 'https://github.com/currica/ruby-saml-idp.git'
+
 # To use debugger
 # gem 'debugger'
