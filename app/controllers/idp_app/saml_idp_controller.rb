@@ -16,18 +16,27 @@ module IdpApp
     def attributes_provider(email)
       %Q{
 <saml:AttributeStatement>
-  <saml:Attribute Name="email" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
-    <saml:AttributeValue>#{email}</saml:AttributeValue>
+  <saml:Attribute Name="User.email"
+                  NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+    <saml:AttributeValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                         xsi:type="xs:string">#{email}</saml:AttributeValue>
   </saml:Attribute>
-  <saml:Attribute Name="firstName" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
-    <saml:AttributeValue>Perry</saml:AttributeValue>
+  <saml:Attribute Name="User.FirstName"
+                  NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+    <saml:AttributeValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                         xsi:type="xs:string">#{My FN}</saml:AttributeValue>
   </saml:Attribute>
-  <saml:Attribute Name="lastName" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
-    <saml:AttributeValue>Elselvier</saml:AttributeValue>
+  <saml:Attribute Name="User.LastName"
+                  NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+    <saml:AttributeValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                         xsi:type="xs:string">#{My LN}</saml:AttributeValue>
   </saml:Attribute>
-  <saml:Attribute Name="groups" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
-    <saml:AttributeValue>my-group</saml:AttributeValue>
-    <saml:AttributeValue>another-group</saml:AttributeValue>
+  <saml:Attribute Name="memberOf"
+                  NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+    <saml:AttributeValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                         xsi:type="xs:string">main-group</saml:AttributeValue>
+    <saml:AttributeValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                         xsi:type="xs:string">another-group</saml:AttributeValue>
   </saml:Attribute>
 </saml:AttributeStatement>
       }
