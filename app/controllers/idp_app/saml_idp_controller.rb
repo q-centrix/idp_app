@@ -24,12 +24,12 @@ module IdpApp
   <saml:Attribute Name="User.FirstName"
                   NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
     <saml:AttributeValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                         xsi:type="xs:string">#{My FN}</saml:AttributeValue>
+                         xsi:type="xs:string">My FN</saml:AttributeValue>
   </saml:Attribute>
   <saml:Attribute Name="User.LastName"
                   NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
     <saml:AttributeValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                         xsi:type="xs:string">#{My LN}</saml:AttributeValue>
+                         xsi:type="xs:string">My LN</saml:AttributeValue>
   </saml:Attribute>
   <saml:Attribute Name="memberOf"
                   NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
