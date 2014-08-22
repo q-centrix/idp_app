@@ -8,7 +8,26 @@ module IdpApp
     end
 
     def idp_make_saml_response(email)
-      encode_SAMLResponse(email)
+      encode_SAMLResponse(email, attributes_provider: attributes_provider(email))
+    end
+
+    def attributes_provider
+      %Q{
+<saml:AttributeStatement>
+  <saml:Attribute Name="email">
+    <saml:AttributeValue>#{nameID}</saml:AttributeValue>
+  </saml:Attribute>
+  <saml:Attribute Name="firstName">
+    <saml:AttributeValue>Perry</saml:AttributeValue>
+  </saml:Attribute>
+  <saml:Attribute Name="lastName">
+    <saml:AttributeValue>Elselvier</saml:AttributeValue>
+  </saml:Attribute>
+  <saml:Attribute Name="group">
+    <saml:AttributeValue>my-group</saml:AttributeValue>
+  </saml:Attribute>
+</saml:AttributeStatement>
+      }
     end
   end
 

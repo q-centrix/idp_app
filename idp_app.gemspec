@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email       = ["rreas@q-centrix.com"]
   s.homepage    = "http://q-centrix.com"
   s.summary     = "SAML IdP application for testing."
-  s.description = "Always authenticates user with email address test@example.com"
+  s.description = "Always authenticates user with provided email address"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
