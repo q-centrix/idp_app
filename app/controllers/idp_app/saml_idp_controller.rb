@@ -8,7 +8,9 @@ module IdpApp
     end
 
     def idp_make_saml_response(email)
-      encode_SAMLResponse(email, attributes_provider: attributes_provider(email))
+      response = encode_SAMLResponse(email, attributes_provider: attributes_provider(email))
+      puts Base64.decode64(response)
+      response
     end
 
     def attributes_provider(email)
