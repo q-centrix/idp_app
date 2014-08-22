@@ -10,6 +10,7 @@ PATH
   specs:
     idp_app (0.0.1)
       rails (~> 4.0.5)
+      ruby-saml-idp
 
 GEM
   remote: https://rubygems.org/
