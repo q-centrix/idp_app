@@ -1,5 +1,7 @@
 require_dependency "idp_app/application_controller"
 
+
+
 module IdpApp
 
   class SamlIdpController < SamlIdp::IdpController
@@ -11,6 +13,10 @@ module IdpApp
       response = encode_SAMLResponse(email, attributes_provider: attributes_provider(email))
       puts Base64.decode64(response)
       response
+    end
+
+    def encode_SAMLResponse(nameID, opts={})
+      raise 'lksjdfld'
     end
 
     def attributes_provider(email)
