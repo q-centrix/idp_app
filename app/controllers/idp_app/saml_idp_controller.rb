@@ -17,17 +17,17 @@ module IdpApp
       %Q{
 <saml:AttributeStatement>
   <saml:Attribute Name="email" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
-    <saml:AttributeValue xsi:type="xs:string">#{email}</saml:AttributeValue>
+    <saml:AttributeValue>#{email}</saml:AttributeValue>
   </saml:Attribute>
   <saml:Attribute Name="firstName" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
-    <saml:AttributeValue xsi:type="xs:string">Perry</saml:AttributeValue>
+    <saml:AttributeValue>Perry</saml:AttributeValue>
   </saml:Attribute>
   <saml:Attribute Name="lastName" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
-    <saml:AttributeValue xsi:type="xs:string">Elselvier</saml:AttributeValue>
+    <saml:AttributeValue>Elselvier</saml:AttributeValue>
   </saml:Attribute>
   <saml:Attribute Name="group" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
-    <saml:AttributeValue xsi:type="xs:string">my-group</saml:AttributeValue>
-    <saml:AttributeValue xsi:type="xs:string">another-group</saml:AttributeValue>
+    <saml:AttributeValue>my-group</saml:AttributeValue>
+    <saml:AttributeValue>another-group</saml:AttributeValue>
   </saml:Attribute>
 </saml:AttributeStatement>
       }
