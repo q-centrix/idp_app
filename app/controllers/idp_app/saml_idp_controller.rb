@@ -11,11 +11,11 @@ module IdpApp
       encode_SAMLResponse(email, attributes_provider: attributes_provider(email))
     end
 
-    def attributes_provider
+    def attributes_provider(email)
       %Q{
 <saml:AttributeStatement>
   <saml:Attribute Name="email">
-    <saml:AttributeValue>#{nameID}</saml:AttributeValue>
+    <saml:AttributeValue>#{email}</saml:AttributeValue>
   </saml:Attribute>
   <saml:Attribute Name="firstName">
     <saml:AttributeValue>Perry</saml:AttributeValue>
