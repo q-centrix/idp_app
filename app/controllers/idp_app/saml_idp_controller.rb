@@ -25,7 +25,7 @@ module IdpApp
   <saml:Attribute Name="lastName" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
     <saml:AttributeValue>Elselvier</saml:AttributeValue>
   </saml:Attribute>
-  <saml:Attribute Name="group" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+  <saml:Attribute Name="groups" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
     <saml:AttributeValue>my-group</saml:AttributeValue>
     <saml:AttributeValue>another-group</saml:AttributeValue>
   </saml:Attribute>
